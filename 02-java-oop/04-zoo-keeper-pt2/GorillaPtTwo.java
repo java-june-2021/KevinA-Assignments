@@ -1,4 +1,4 @@
-public class Gorilla extends Mammal {
+public class GorillaPtTwo extends MammalPtTwo {
     public GorillaPtTwo(String name, int energyLevel) {
         this.name = name;
         this.energyLevel = energyLevel;

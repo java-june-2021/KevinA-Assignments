@@ -3,17 +3,17 @@ public class Mammal {
     protected int energyLevel;
 
     //constructor
-    public Mammal (String name, int energyLevel) {
+    public MammalPtTwp (String name, int energyLevel) {
         this.name = name;
         this.energyLevel = energyLevel;
     }
 
-    public Mammal (String name) {
+    public MammalPtTwp (String name) {
         this.name = name;
         this.energyLevel = 100;
     }
     
-    public Mammal() {
+    public MammalPtTwp() {
         this.name = "Nameless Beast";
         this.energyLevel = 100;
     }

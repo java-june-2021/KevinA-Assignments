@@ -1,9 +1,9 @@
-public class GorillaTest {
+public class Gorilla {
 
     public static void main(String[] args) {
-        Gorilla kong = new Gorilla("Kong", 100);
-        Gorilla king = new Gorilla("King");
-        Gorilla beast = new Gorilla();
+        GorillaPtTwo kong = new GorillaPtTwo("Kong", 100);
+        GorillaPtTwo king = new GorillaPtTwo("King");
+        GorillaPtTwo beast = new GorillaPtTwo();
 
         // kong.displayEnergy();
         // kong.throwSomething();

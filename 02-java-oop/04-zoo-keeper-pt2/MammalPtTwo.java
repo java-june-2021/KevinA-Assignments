@@ -1,17 +1,23 @@
-public class Gorilla extends Mammal {
-    public GorillaPtTwo(String name, int energyLevel) {
+public class MammalPtTwo {
+    protected String name;
+    protected int energyLevel;
+
+    //constructor
+    public MammalPtTwo(String name, int energyLevel) {
         this.name = name;
         this.energyLevel = energyLevel;
     }
-    public GorillaPtTwo(String name) {
+
+    public MammalPtTwo(String name) {
         this.name = name;
         this.energyLevel = 100;
     }
     
-    public GorillaPtTwo() {
+    public MammalPtTwo() {
         this.name = "Nameless Beast";
         this.energyLevel = 100;
     }
+
     //methods
     public int displayEnergy() {
         System.out.println(this.name + "'s energy level is: " + this.energyLevel);
