@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="/css/dateStyle.css">
 <script type="text/javascript" src="/js/script.js"></script>
 </head>
-<body onload=dateAlert()>
-	<script></script>
+<body onload="dateAlert()">
 	<h1><c:out value="${date}"/></h1>
 </body>
 </html>
