@@ -53,7 +53,7 @@ public class BookService {
 	}
 	
 	// Delete
-	public String deleteAlbum(Long id) {
+	public String deleteBook(Long id) {
 		this.bRepo.deleteById(id);
 		return "Album " + id + " has been deleted.";
 	}
@@ -75,4 +75,17 @@ public class BookService {
             return null;
         }
     }
+    
+    public void updateBook(int id, Book book) {
+        if (id < books.size()){
+            books.set(id, book);
+        }
+    }
+    
+    public void destroyBook(int id) {
+        if (id < books.size()){
+            books.remove(id);
+        }
+    }
+
 }

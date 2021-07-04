@@ -3,6 +3,7 @@ package com.kevin.books.controllers;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,5 +35,16 @@ public class BooksApi {
     public Book show(@PathVariable("id") Long id) {
         Book book = bService.findBook(id);
         return book;
+    }
+    
+
+    @PutMapping("/api/books/{id}")
+	public void updateBook(@PathVariable("id") Long id, Book book) {
+		this.bService.updateBook(book);
+    }
+    
+    @RequestMapping(value="/api/books/{id}", method=RequestMethod.DELETE)
+    public void destroy(@PathVariable("id") Long id) {
+       this.bService.deleteBook(id);
     }
 }

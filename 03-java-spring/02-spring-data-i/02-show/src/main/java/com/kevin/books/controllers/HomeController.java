@@ -35,7 +35,7 @@
 //	
 //	@DeleteMapping("delete/{id}")
 //	public void deleteBook(@PathVariable("id") Long id) {
-//		this.bService.deleteAlbum(id);
+//		this.bService.deleteBook(id);
 //	}
 //	
 //	@PutMapping("/{id}")
