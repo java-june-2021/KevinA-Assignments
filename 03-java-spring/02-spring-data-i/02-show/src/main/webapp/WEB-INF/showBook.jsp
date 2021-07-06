@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>   
+<body>  
 <h1><c:out value="${book.title}"/></h1>
 <p>Description: <c:out value="${book.description}"/></p>
 <p>Language: <c:out value="${book.language}"/></p>
