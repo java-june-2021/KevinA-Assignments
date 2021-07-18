@@ -6,9 +6,24 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Category</title>
 </head>
 <body>
-
+	<h1><c:out value="${category.name}"/></h1> 
+	<hr>
+	<h2>Categories:</h2>
+	<c:forEach items="${category.products}" var="pro">
+		<li><a href="/products/${pro.id}">${pro.name}</a></li>
+	</c:forEach>
+	
+	<h3>Add Product to Category</h3>
+	<form action="/categories/${category.id}" method="POST">
+		<select name="showPro">
+		<c:forEach items="${product}" var="otherPro">
+		<option value="${otherPro.id}">${otherPro.name}</option>
+		</c:forEach>
+		</select>
+		<button>Add</button>
+	</form>
 </body>
 </html>

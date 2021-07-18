@@ -14,7 +14,11 @@ public class CategoryService  {
 	@Autowired
 	private CategoryRepository cRepo;
 	
-	public Category createProduct(Category cat) {
+	public List<Category> allCategories(){
+		return this.cRepo.findAll();
+	}
+	
+	public Category createCategory(Category cat) {
 		return this.cRepo.save(cat);
 	}
 	
@@ -24,5 +28,11 @@ public class CategoryService  {
 	
 	public List<Category> findCatNotProd(Product product) {
 		return this.cRepo.findByProductsNotContains(product);
+	}
+	
+	public void addProductToCategory(Product product, Category category) {
+		List<Product> existingProducts = category.getProducts();
+		existingProducts.add(product);
+		this.cRepo.save(category);
 	}
 }

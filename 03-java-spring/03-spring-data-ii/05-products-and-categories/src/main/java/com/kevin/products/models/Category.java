@@ -14,6 +14,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="categories")
@@ -21,6 +22,7 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@NotEmpty
 	private String name;
 	@Column(updatable=false)
     private Date createdAt;
@@ -35,6 +37,11 @@ public class Category {
 	public Category() {
 		
 	}
+	
+	public Category(@NotEmpty String name) {
+		this.name = name;
+	}
+
 	public Long getId() {
 		return id;
 	}

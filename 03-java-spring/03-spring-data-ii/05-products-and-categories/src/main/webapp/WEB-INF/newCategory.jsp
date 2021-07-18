@@ -9,6 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>New Category</h1>
+	<form action="/newCat" method="post">
+		<div>
+			<label for="name">Name:</label>
+			<input type="text" name="name">
+		</div>
+		<button>Create</button>
+	</form>
 </body>
 </html>

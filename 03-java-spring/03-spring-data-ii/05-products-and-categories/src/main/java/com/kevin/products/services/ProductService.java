@@ -14,6 +14,10 @@ public class ProductService {
 	@Autowired
 	private ProductRepository pRepo;
 	
+	public List<Product> allProducts(){
+		return this.pRepo.findAll();
+	}
+	
 	public Product createProduct(Product product) {
 		return this.pRepo.save(product);
 	}
@@ -26,8 +30,9 @@ public class ProductService {
 		return this.pRepo.findByCategoriesNotContains(category);
 	}
 	
-	public void addCategoryToProduct(Product product, Category category) {
+	public void addCategoryToProduct(Category category, Product product) {
 		List<Category> existingCats = product.getCategories();
-		
+		existingCats.add(category);
+		this.pRepo.save(product);
 	}
 }
