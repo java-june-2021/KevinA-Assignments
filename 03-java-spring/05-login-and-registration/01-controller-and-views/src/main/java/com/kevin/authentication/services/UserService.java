@@ -28,10 +28,10 @@ public class UserService {
     
     // find user by id
     public User findUserById(Long id) {
-    	Optional<User> u = userRepository.findById(id);
+    	Optional<User> eUser = userRepository.findById(id);
     	
-    	if(u.isPresent()) {
-            return u.get();
+    	if(eUser.isPresent()) {
+            return eUser.get();
     	} else {
     	    return null;
     	}
